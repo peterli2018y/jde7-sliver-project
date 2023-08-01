@@ -1,11 +1,9 @@
-import my_selenium
-
-# Set the folder path
-
-# Loop over the files in the folder
-
+from my_selenium import importWebsite
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 def main():
-    my_selenium.importWebsite("webpage")
+    importWebsite("webpage")
 
 if __name__ == "__main__":
     main()
