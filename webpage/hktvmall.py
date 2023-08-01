@@ -6,7 +6,7 @@ def search(search_Info):
     driver=openWedsite(url)
     return driver
 
-def run():
-    driver = search("奶粉")
+def run(search_Info):
+    driver = search(search_Info)
     
 

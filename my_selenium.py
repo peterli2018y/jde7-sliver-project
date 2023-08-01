@@ -1,10 +1,8 @@
 import os
 import importlib
-#import time
+import time
 #import pandas as pd
 from selenium import webdriver
-#from selenium.webdriver.common.by import By
-#from selenium.webdriver.chrome.options import Options
 
 def openWedsite(url):
     driver = webdriver.Chrome()
@@ -24,4 +22,4 @@ def importWebsite(folder_path):
             # Import the module dynamically
             module = importlib.import_module(f'{folder_path}.{module_name}')
             # Use the module
-            module.run()
+            module.run("奶粉")

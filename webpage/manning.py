@@ -6,12 +6,7 @@ from selenium.webdriver.common.by import By
   #  driver=openWedsite(url)
   #  return driver
 
-def run():
+def run(search_Info):
     url = "https://www.mannings.com.hk/mom-and-baby/baby-food/c/febabyfood"
     driver = openWedsite(url)
     results = driver.find_elements(By.XPATH, '//div[@class="product_listing product_grid"]')
-    print(len(results))
-    for result in results:
-        print(result.text)
-        print(result.text.split('\n'))
-    
