@@ -1,4 +1,3 @@
-
 import my_selenium
 
 # Set the folder path
@@ -6,7 +5,7 @@ import my_selenium
 # Loop over the files in the folder
 
 def main():
-    my_selenium.importWebsite()
+    my_selenium.importWebsite("webpage")
 
 if __name__ == "__main__":
     main()

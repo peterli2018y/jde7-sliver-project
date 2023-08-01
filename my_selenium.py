@@ -1,10 +1,10 @@
 import os
 import importlib
-import time
-import pandas as pd
+#import time
+#import pandas as pd
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
+#from selenium.webdriver.common.by import By
+#from selenium.webdriver.chrome.options import Options
 
 def openWedsite(url):
     driver = webdriver.Chrome()
@@ -15,11 +15,13 @@ def openWedsite(url):
         print("invail url!")
         return None
 
-for file_name in os.listdir(folder_path):
+def importWebsite(folder_path):
+    for file_name in os.listdir(folder_path):
     # Check that the file is a Python file
-    if file_name.endswith('.py'):
-        # Get the module name (without the .py extension)
-        module_name = file_name[:-3]
-        # Import the module dynamically
-        module = importlib.import_module(f'{folder_path}.{module_name}')
-        # Use the module
+        if file_name.endswith('.py'):
+            # Get the module name (without the .py extension)
+            module_name = file_name[:-3]
+            # Import the module dynamically
+            module = importlib.import_module(f'{folder_path}.{module_name}')
+            # Use the module
+            module.run()
