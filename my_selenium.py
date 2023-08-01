@@ -4,6 +4,8 @@ import time
 #import pandas as pd
 from selenium import webdriver
 
+
+
 def openWedsite(url):
     driver = webdriver.Chrome()
     try:
@@ -13,7 +15,7 @@ def openWedsite(url):
         print("invail url!")
         return None
 
-def importWebsite(folder_path):
+def importWebsite(folder_path, search_Info):
     for file_name in os.listdir(folder_path):
     # Check that the file is a Python file
         if file_name.endswith('.py'):
@@ -22,4 +24,4 @@ def importWebsite(folder_path):
             # Import the module dynamically
             module = importlib.import_module(f'{folder_path}.{module_name}')
             # Use the module
-            module.run("奶粉")
+            module.run(search_Info)
