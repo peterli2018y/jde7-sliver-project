@@ -7,6 +7,6 @@ def search(search_Info):
     return driver
 
 def run():
-    driver = search("奶粉")
-
-    result04=d.find_elements(By.XPATH, "//li")
+    #driver = search("奶粉")
+    #result04=driver.find_elements(By.XPATH, "//li")
+    pass
