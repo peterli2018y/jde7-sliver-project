@@ -24,4 +24,8 @@ def importWebsite(folder_path, search_Info):
             # Import the module dynamically
             module = importlib.import_module(f'{folder_path}.{module_name}')
             # Use the module
-            module.run(search_Info)
+            u=module.url(search_Info)
+            driver = openWedsite(u)
+            data=module.extract(driver)
+
+            print(data)
