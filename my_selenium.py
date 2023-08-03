@@ -26,6 +26,4 @@ def importWebsite(folder_path, search_Info):
             # Use the module
             u=module.url(search_Info)
             driver = openWedsite(u)
-            data=module.extract(driver)
-
-            print(data)
+            data=module.extract(driver, 120)

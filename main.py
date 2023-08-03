@@ -3,7 +3,7 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 
-search_Info="奶粉"
+search_Info="地毯"
 def main():
     importWebsite("webpage", search_Info)
 if __name__ == "__main__":
