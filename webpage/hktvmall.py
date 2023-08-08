@@ -7,6 +7,11 @@ def url(search_Info):
 def dollars2Float(dollar):
     float_str=dollar[2:].replace(",","")
     return float(float_str)
+def InitialData():
+    keys=["productor", "product_name", "regular_price", "sale_price", "product_url", "size"]
+    values=[[],[],[],[],[],0]
+    return dict(zip(keys, values))
+
 def extract(driver, data_size):
 
     result_divs=driver.find_elements(By.XPATH, '//div[@class="info-wrapper"]')
@@ -14,8 +19,6 @@ def extract(driver, data_size):
     for info in result_divs:
         ProductName=info.find_element(By.CLASS_NAME, "brand-product-name").text
         chi_titles.append(ProductName)
-        finally:
-            try
         chi_titles.append(info.find_element(By.CLASS_NAME, "brand-product-name").text)
         quanties.append(result_ups[1])
         solds.append(result_ups[2])
